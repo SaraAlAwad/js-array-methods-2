@@ -48,7 +48,7 @@ console.log(join8);
 let numArray2 = [36, 324, 122, 62, 98, 88, 99, 1000];
 console.log(numArray2.sort((a, b) => a - b));
 
-// Lev3_! Reverse Name, Words
+// Lev3_1 Reverse Name, Words
 function reverseWord(str) {
     return str.split("").reverse().join("");
 }
@@ -121,17 +121,22 @@ let checkNumber = [
     15,
     78
 ];
-checkNumber.forEach(e => {
+// checkNumber.forEach(e => {
+//     if (e % 3 == 0) {
+//         let newLocal = e + 100;
+//         console.log(newLocal)
+//     }
+//     else if (e % 3 != 0) {
+//         console.log(e)
+//     }‚
+// })
+checkNumber.forEach((e, index) => {
     if (e % 3 == 0) {
-        let newLocal = e + 100;
-        // return e + 100;
-        console.log(newLocal)
+        checkNumber[index] = e + 100;
     }
-    else if (e % 3 != 0) {
-        console.log(e)
-    }
-    // console.log(e)
+    // return e;
 })
+console.log(checkNumber);
 // Lev 1-2 map() 
 console.log('%c---------map()---------', 'color:purple');
 let upperDrinks = getraenke.map(e => {
@@ -144,5 +149,5 @@ let array = [18, 16, 80, 51, 47, 38, 95, 42, 68, 61, 34, 51, 20, 17,
     27, 71, 26, 15, 78
 ];
 let map1 = array.map(x => x * 2);
-
+//.sort((a, b) => a - b);
 console.log(map1.sort((a, b) => a - b));
